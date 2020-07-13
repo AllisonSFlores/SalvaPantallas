@@ -12,6 +12,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -22,12 +23,16 @@ import javax.swing.JLabel;
  */
 public class Ventanaa extends JFrame{
     private final Dimension dimension;
+    private JLabel fondo;
  
     public Ventanaa(){
-        JLabel fondo =new JLabel(new ImageIcon("shenron.jpg"));
+        ImageIcon imagen = new ImageIcon("shenron.jpg");
+        fondo =new JLabel();
+        dimension=super.getToolkit().getScreenSize();   //tomar tamannio de la pantalla
+        fondo.setBounds(0, 0, dimension.width, dimension.height);
+        fondo.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(dimension.width, dimension.height, Image.SCALE_SMOOTH)));
         fondo.setVisible(true);
         this.add(fondo);
-        dimension=super.getToolkit().getScreenSize();   //tomar tamannio de la pantalla
         super.setSize(dimension);
         super.setUndecorated(true);
         super.setVisible(true);
@@ -36,6 +41,9 @@ public class Ventanaa extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         
         
+    }
+    public JLabel getFondo(){
+        return fondo;
     }
     public Dimension getDimension(){
         return dimension;

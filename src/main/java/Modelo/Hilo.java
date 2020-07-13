@@ -49,7 +49,7 @@ public class Hilo implements Runnable{
                         }
                         System.out.println("x "+label.getX()+" y "+label.getY());
                         try {
-                            sleep(15);
+                            sleep(7);
                         } catch (InterruptedException ex) {
                             Logger.getLogger(Hilo.class.getName()).log(Level.SEVERE, null, ex);
                         }
@@ -74,7 +74,7 @@ public class Hilo implements Runnable{
                             label.setLocation( label.getX(), label.getY()+1);
                         try {
                             System.out.println("x "+label.getX()+" y "+label.getY());
-                            sleep(15);
+                            sleep(7);
                         } catch (InterruptedException ex) {
                             Logger.getLogger(Hilo.class.getName()).log(Level.SEVERE, null, ex);
                         }
@@ -82,7 +82,7 @@ public class Hilo implements Runnable{
                     try {
                             label.setLocation( label.getX()+1, label.getY());
                             System.out.println("x "+label.getX()+" y "+label.getY());
-                            sleep(10);
+                            sleep(7);
                         } catch (InterruptedException ex) {
                             Logger.getLogger(Hilo.class.getName()).log(Level.SEVERE, null, ex);
                         }
@@ -111,7 +111,7 @@ public class Hilo implements Runnable{
                         }
                         System.out.println("x "+label.getX()+" y "+label.getY());
                         try {
-                            sleep(10);
+                            sleep(7);
                         } catch (InterruptedException ex) {
                             Logger.getLogger(Hilo.class.getName()).log(Level.SEVERE, null, ex);
                         }
@@ -135,7 +135,7 @@ public class Hilo implements Runnable{
                             label.setLocation( label.getX(), label.getY()-1);
                         try {
                             System.out.println("x "+label.getX()+" y "+label.getY());
-                            sleep(10);
+                            sleep(7);
                         } catch (InterruptedException ex) {
                             Logger.getLogger(Hilo.class.getName()).log(Level.SEVERE, null, ex);
                         }
@@ -149,25 +149,25 @@ public class Hilo implements Runnable{
                 case 0:
                     while(label.getX() != 0){
                         label.setLocation(label.getX()-1,label.getY());
-                        sleep(10);
+                        sleep(7);
                     }
                     break;
                 case 1:
                     while(label.getY() != 0){
                         label.setLocation(label.getX(),label.getY()-1);
-                        sleep(10);
+                        sleep(7);
                     }
                     break;
                 case 2:
                     while(label.getX() != width-269){
                         label.setLocation(label.getX()+1,label.getY());
-                        sleep(10);
+                        sleep(7);
                     }
                     break;
                 case 3:
                     while(label.getY() != height-265){
                         label.setLocation(label.getX(),label.getY()+1);
-                        sleep(10);
+                        sleep(7);
                     }
                     break;
             }
