@@ -24,9 +24,6 @@ public class Mouse extends MouseAdapter implements MouseListener{
     @Override
     public void mousePressed(MouseEvent e) {
         Controladora.crearLabel(e.getX(), e.getY());
-        System.out.println("Mouse Pressed at : x:" + e.getX()
-            + " y: "+e.getY());
-        //this.appWindow.repaint();
     }
     
 }

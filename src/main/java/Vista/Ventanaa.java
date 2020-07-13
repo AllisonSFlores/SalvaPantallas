@@ -7,11 +7,7 @@ package Vista;
 
 import Controlador.Controladora;
 import Controlador.Mouse;
-import java.awt.BasicStroke;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -48,18 +44,6 @@ public class Ventanaa extends JFrame{
     public Dimension getDimension(){
         return dimension;
     }
-           
-            /*
-    @Override
-    public void paint(Graphics e){
-        super.paint(e);
-        Graphics2D circulo = (Graphics2D) e;
-        circulo.setStroke(new BasicStroke(10));
-        circulo.setPaint(Color.BLACK);
-        circulo.drawOval(10, 10, 20, 20);
-        
-        
-    }*/
     public static void main(String wil[]){
         Controladora a = new Controladora(new Ventanaa());
     }
